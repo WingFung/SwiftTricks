@@ -28,7 +28,7 @@ class NavBarDecorator {
         navBar.isTranslucent = true
         if UIApplication.shared.responds(to: Selector(("statusBar"))),
             let statusBarView = UIApplication.shared.value(forKey: "statusBar") as? UIView {
-            statusBarView.backgroundColor = inTranslucentMode ? barColor : nil
+            statusBarView.backgroundColor = toTranslucent ? barColor : nil
         }
         if let tabBar = vc.tabBarController?.tabBar {
             // tabBar's translucency may be changed after setting navigation bar
